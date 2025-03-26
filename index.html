@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO 核心标签 -->
-    <meta name="description" content="Play Monster Survivors and other thrilling survival games on 2doller.online.  Experience intense monster battles with strategic gameplay, available for free on all devices.">
-    <link rel="canonical" href="https://www.2doller.online/monster-survivors"  />
-    <title>Monster Survivors - Free Online Survival Games | 2doller.online</title> 
+    <meta name="description" content="Welcome to my personal website! Explore my photo gallery and connect with me on social media.">
+    <link rel="canonical" href="https://www.2doller.online"  />
+    <title>My Personal Website | 2doller.online</title> 
     <!-- Tailwind CSS 集成 -->
     <script src="https://cdn.tailwindcss.com"></script> 
     <!-- 苹果风格自定义 CSS -->
@@ -21,18 +21,18 @@
             background: var(--apple-bg);
             color: var(--apple-text);
         }
-        .game-card {
+        .photo-carousel {
             background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
             backdrop-filter: blur(10px);
             border-radius: 18px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         }
-        .dynamic-iframe {
-            aspect-ratio: 16/9;
-            height: auto;
+        .social-links a {
+            transition: transform 0.3s ease, color 0.3s ease;
         }
-        @media (max-width: 768px) {
-            .dynamic-iframe { min-height: 50vh }
+        .social-links a:hover {
+            transform: scale(1.1);
+            color: var(--apple-blue);
         }
     </style>
 </head>
@@ -40,60 +40,45 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <!-- 主标题 -->
         <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-8 text-[var(--apple-text)]">
-            Monster Survivors Ultimate Edition 
+            Welcome to My Personal Website 
         </h1>
  
-        <!-- 游戏简介区块 -->
-        <section class="game-card p-8 mb-12">
-            <h2 class="text-3xl font-semibold mb-6">🚀 Game Overview</h2>
-            <p class="text-lg leading-relaxed mb-6 text-gray-700">
-                Dive into the <strong>post-apocalyptic world</strong> of Monster Survivors, where strategic combat meets intense survival gameplay. Choose between two unique editions, each offering distinct challenges and weapon systems.
-            </p>
-            
-            <!-- 双游戏布局 -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- 游戏1 -->
-                <article>
-                    <h3 class="text-2xl font-bold mb-4">🔥 Classic Edition</h3>
-                    <iframe 
-                        src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"  
-                        class="w-full dynamic-iframe rounded-xl border-2 border-[var(--apple-blue)]"
-                        title="Monster Survivors Classic Edition"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope">
-                    </iframe>
-                    <p class="mt-4 text-gray-600">
-                        Original gameplay with 50+ weapon combinations and procedurally generated maps.
-                    </p>
-                </article>
- 
-                <!-- 游戏2 -->
-                <article>
-                    <h3 class="text-2xl font-bold mb-4">💥 Advanced Edition</h3>
-                    <iframe 
-                        src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"  
-                        class="w-full dynamic-iframe rounded-xl border-2 border-[var(--apple-blue)]"
-                        title="Monster Survivors Advanced Edition"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope">
-                    </iframe>
-                    <p class="mt-4 text-gray-600">
-                        Enhanced AI system with dynamic weather effects and cooperative multiplayer mode.
-                    </p>
-                </article>
+        <!-- 相片轮播区块 -->
+        <section class="photo-carousel p-8 mb-12">
+            <h2 class="text-3xl font-semibold mb-6">📸 Photo Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 示例图片 -->
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/400x300"  alt="Photo 1" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/400x300"  alt="Photo 2" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/400x300"  alt="Photo 3" class="w-full h-full object-cover">
+                </div>
             </div>
         </section>
  
-        <!-- 游戏详情叙述 -->
-        <section class="prose prose-lg max-w-3xl mx-auto">
-            <h2 class="text-3xl font-semibold text-[var(--apple-text)]">🎮 Core Features</h2>
-            <div class="space-y-6 mt-6">
-                <h3 class="text-2xl font-medium">⚔️ Combat System</h3>
-                <p>Experience real-time weapon switching mechanics and adaptive enemy AI that learns your tactics.</p>
- 
-                <h3 class="text-2xl font-medium">🌍 Open World Design</h3>
-                <p>Explore 8 unique biomes with destructible environments and hidden loot caches.</p>
- 
-                <h3 class="text-2xl font-medium">📈 Progression System</h3>
-                <p>Unlock 150+ skill upgrades and customize your survivor with modular equipment.</p>
+        <!-- 社交媒体链接区块 -->
+        <section class="text-center">
+            <h2 class="text-3xl font-semibold mb-6">📱 Connect with Me</h2>
+            <div class="social-links flex justify-center space-x-8">
+                <a href="https://twitter.com"  target="_blank" class="text-gray-600 hover:text-[var(--apple-blue)]">
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com"  target="_blank" class="text-gray-600 hover:text-[var(--apple-blue)]">
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com"  target="_blank" class="text-gray-600 hover:text-[var(--apple-blue)]">
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                    </svg>
+                </a>
             </div>
         </section>
     </main>
