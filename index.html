@@ -1,62 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Monster Survivors - an exciting online survival game where you fight monsters and strategize to survive. Available now on 2doller.online!"> 
+    <!-- SEO 核心标签 -->
+    <meta name="description" content="Play Monster Survivors and other thrilling survival games on 2doller.online.  Experience intense monster battles with strategic gameplay, available for free on all devices.">
     <link rel="canonical" href="https://www.2doller.online/monster-survivors"  />
-    <title>Monster Survivors - Play Online Now | 2doller.online</title> 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"  rel="stylesheet">
+    <title>Monster Survivors - Free Online Survival Games | 2doller.online</title> 
+    <!-- Tailwind CSS 集成 -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- 苹果风格自定义 CSS -->
     <style>
+        :root {
+            --apple-bg: #f5f5f7;
+            --apple-text: #1d1d1f;
+            --apple-blue: #007aff;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f5f5f7;
-            color: #1d1d1f;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell;
+            background: var(--apple-bg);
+            color: var(--apple-text);
         }
-        h1, h2 {
-            color: #1d1d1f;
+        .game-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         }
-        a {
-            color: #007aff;
-        }
-        .game-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .game-iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        .dynamic-iframe {
+            aspect-ratio: 16/9;
+            height: auto;
         }
         @media (max-width: 768px) {
-            .game-iframe {
-                height: 400px;
-            }
+            .dynamic-iframe { min-height: 50vh }
         }
     </style>
 </head>
-<body>
-    <div class="game-container">
-        <!-- 游戏标题 -->
-        <h1 class="text-4xl font-bold text-center mt-8 mb-4">Monster Survivors</h1>
-        <!-- 一句话介绍 -->
-        <p class="text-lg text-center text-gray-600 mb-8">An intense survival game where you battle monsters and strategize to stay alive. Play now for free!</p>
-        <!-- 游戏基本情况叙述 -->
-        <div class="prose max-w-2xl mx-auto mb-12">
-            <h2 class="text-2xl font-semibold mt-6 mb-4">About Monster Survivors</h2>
-            <p>Monster Survivors is an action-packed online game where players must survive waves of monstrous creatures. With intuitive controls and strategic gameplay, you'll need to gather resources, upgrade your weapons, and outsmart your enemies to stay alive. Whether you're a casual gamer or a hardcore strategist, Monster Survivors offers endless hours of fun and challenge.</p>
-            <h2 class="text-2xl font-semibold mt-6 mb-4">How to Play</h2>
-            <p>Use your mouse or touchscreen to control your character. Collect resources, avoid monsters, and upgrade your gear to survive as long as possible. The game is easy to learn but hard to master!</p>
-            <h2 class="text-2xl font-semibold mt-6 mb-4">Why Play Monster Survivors?</h2>
-            <p>Monster Survivors is designed to be fast-paced and engaging, with stunning visuals and smooth gameplay. It's perfect for quick gaming sessions or long marathons. Plus, it's completely free to play!</p>
-        </div>
-        <!-- 游戏 IFRAME -->
-        <div class="game-iframe-container">
-            <iframe src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"  class="game-iframe" title="Monster Survivors Game"></iframe>
-        </div>
-    </div>
+<body class="antialiased">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- 主标题 -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-8 text-[var(--apple-text)]">
+            Monster Survivors Ultimate Edition 
+        </h1>
+ 
+        <!-- 游戏简介区块 -->
+        <section class="game-card p-8 mb-12">
+            <h2 class="text-3xl font-semibold mb-6">🚀 Game Overview</h2>
+            <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                Dive into the <strong>post-apocalyptic world</strong> of Monster Survivors, where strategic combat meets intense survival gameplay. Choose between two unique editions, each offering distinct challenges and weapon systems.
+            </p>
+            
+            <!-- 双游戏布局 -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 游戏1 -->
+                <article>
+                    <h3 class="text-2xl font-bold mb-4">🔥 Classic Edition</h3>
+                    <iframe 
+                        src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"  
+                        class="w-full dynamic-iframe rounded-xl border-2 border-[var(--apple-blue)]"
+                        title="Monster Survivors Classic Edition"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope">
+                    </iframe>
+                    <p class="mt-4 text-gray-600">
+                        Original gameplay with 50+ weapon combinations and procedurally generated maps.
+                    </p>
+                </article>
+ 
+                <!-- 游戏2 -->
+                <article>
+                    <h3 class="text-2xl font-bold mb-4">💥 Advanced Edition</h3>
+                    <iframe 
+                        src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"  
+                        class="w-full dynamic-iframe rounded-xl border-2 border-[var(--apple-blue)]"
+                        title="Monster Survivors Advanced Edition"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope">
+                    </iframe>
+                    <p class="mt-4 text-gray-600">
+                        Enhanced AI system with dynamic weather effects and cooperative multiplayer mode.
+                    </p>
+                </article>
+            </div>
+        </section>
+ 
+        <!-- 游戏详情叙述 -->
+        <section class="prose prose-lg max-w-3xl mx-auto">
+            <h2 class="text-3xl font-semibold text-[var(--apple-text)]">🎮 Core Features</h2>
+            <div class="space-y-6 mt-6">
+                <h3 class="text-2xl font-medium">⚔️ Combat System</h3>
+                <p>Experience real-time weapon switching mechanics and adaptive enemy AI that learns your tactics.</p>
+ 
+                <h3 class="text-2xl font-medium">🌍 Open World Design</h3>
+                <p>Explore 8 unique biomes with destructible environments and hidden loot caches.</p>
+ 
+                <h3 class="text-2xl font-medium">📈 Progression System</h3>
+                <p>Unlock 150+ skill upgrades and customize your survivor with modular equipment.</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
