@@ -1,151 +1,194 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO 核心标签 -->
-    <meta name="description" content="Welcome to canfly's personal website! Explore my photo gallery and connect with me on social media.">
-    <link rel="canonical" href="https://www.2doller.online"  />
-    <title>canfly's Personal Website | 2doller.online</title> 
-    <!-- Tailwind CSS 集成 -->
-    <script src="https://cdn.tailwindcss.com"></script> 
-    <!-- 苹果风格自定义 CSS -->
+    <title>CANFLY导航</title>
     <style>
-        :root {
-            --apple-bg: #f5f5f7;
-            --apple-text: #1d1d1f;
-            --apple-blue: #007aff;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell;
-            background: var(--apple-bg);
-            color: var(--apple-text);
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            color: #333;
         }
-        .photo-carousel {
-            background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-            backdrop-filter: blur(10px);
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            overflow: hidden;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 20px auto;
             position: relative;
+        }
+        
+        .search-box input {
             width: 100%;
-            height: 400px;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s;
         }
-        .carousel-item {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+        
+        .search-box input:focus {
+            border-color: #0078ff;
+            box-shadow: 0 0 5px rgba(0,120,255,0.3);
         }
-        .carousel-item.active  {
-            opacity: 1;
+        
+        .category {
+            margin: 30px 0;
         }
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
+        
+        .category-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #0078ff;
         }
-        .social-links a {
-            transition: transform 0.3s ease, color 0.3s ease;
+        
+        .site-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
         }
-        .social-links a:hover {
-            transform: scale(1.1);
-            color: var(--apple-blue);
+        
+        .site-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: #333;
         }
-        .profile-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
+        
+        .site-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        .profile-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #ccc;
-            margin-right: 1rem;
+        
+        .site-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
         }
-        .profile-name {
-            font-size: 2.5rem;
+        
+        .site-name {
             font-weight: bold;
-            color: var(--apple-text);
+            margin-bottom: 5px;
+        }
+        
+        .site-desc {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #666;
         }
     </style>
 </head>
-<body class="antialiased">
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- 个人名字和头像 -->
-        <div class="profile-header">
-            <div class="profile-avatar"></div>
-            <div class="profile-name">canfly</div>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">CANFLY导航</div>
+            <div class="search-box">
+                <input type="text" placeholder="搜索网站...">
+            </div>
+        </header>
+        
+        <div class="category">
+            <h2 class="category-title">常用网站</h2>
+            <div class="site-grid">
+                <a href="https://www.baidu.com" class="site-item" target="_blank">
+                    <div class="site-name">百度</div>
+                    <div class="site-desc">全球最大的中文搜索引擎</div>
+                </a>
+                <a href="https://www.zhihu.com" class="site-item" target="_blank">
+                    <div class="site-name">知乎</div>
+                    <div class="site-desc">中文互联网高质量的问答社区</div>
+                </a>
+                <a href="https://www.bilibili.com" class="site-item" target="_blank">
+                    <div class="site-name">哔哩哔哩</div>
+                    <div class="site-desc">中国年轻世代高度聚集的文化社区</div>
+                </a>
+                <a href="https://www.weibo.com" class="site-item" target="_blank">
+                    <div class="site-name">微博</div>
+                    <div class="site-desc">随时随地发现新鲜事</div>
+                </a>
+            </div>
         </div>
- 
-        <!-- 相片轮播区块 -->
-        <section class="photo-carousel p-8 mb-12">
-            <h2 class="text-3xl font-semibold mb-6">📸 Photo Gallery</h2>
-            <div class="carousel">
-                <div class="carousel-item active">
-                    <img src="1.png"  alt="Photo 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="4.png"  alt="Photo 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="微信截图_20241226225526.png"  alt="Photo 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="3.png"  alt="Photo 4">
-                </div>
-                <div class="carousel-item">
-                    <img src="6.png"  alt="Photo 5">
-                </div>
-                <div class="carousel-item">
-                    <img src="5.png"  alt="Photo 6">
-                </div>
-            </div>
-        </section>
- 
-        <!-- 社交媒体链接区块 -->
-        <section class="text-center">
-            <h2 class="text-3xl font-semibold mb-6">📱 Connect with Me</h2>
-            <div class="social-links flex justify-center space-x-8">
-                <a href="https://weixin.qq.com"  target="_blank" class="text-gray-600 hover:text-[var(--apple-blue)]">
-                    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
+        
+        <div class="category">
+            <h2 class="category-title">学习资源</h2>
+            <div class="site-grid">
+                <a href="https://www.icourse163.org" class="site-item" target="_blank">
+                    <div class="site-name">中国大学MOOC</div>
+                    <div class="site-desc">优质的中文MOOC学习平台</div>
                 </a>
-                <a href="https://weibo.com"  target="_blank" class="text-gray-600 hover:text-[var(--apple-blue)]">
-                    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
+                <a href="https://www.runoob.com" class="site-item" target="_blank">
+                    <div class="site-name">菜鸟教程</div>
+                    <div class="site-desc">编程技术学习网站</div>
                 </a>
-                <a href="https://xiaohongshu.com"  target="_blank" class="text-gray-600 hover:text-[var(--apple-blue)]">
-                    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
+                <a href="https://www.w3school.com.cn" class="site-item" target="_blank">
+                    <div class="site-name">W3School</div>
+                    <div class="site-desc">Web技术教程</div>
+                </a>
+                <a href="https://www.csdn.net" class="site-item" target="_blank">
+                    <div class="site-name">CSDN</div>
+                    <div class="site-desc">专业开发者社区</div>
                 </a>
             </div>
-        </section>
-    </main>
- 
-    <!-- JavaScript 实现轮播功能 -->
-    <script>
-        const carouselItems = document.querySelectorAll('.carousel-item'); 
-        let currentIndex = 0;
- 
-        function showNextImage() {
-            // 隐藏当前图片 
-            carouselItems[currentIndex].classList.remove('active'); 
-            // 计算下一张图片的索引 
-            currentIndex = (currentIndex + 1) % carouselItems.length; 
-            // 显示下一张图片 
-            carouselItems[currentIndex].classList.add('active'); 
-        }
- 
-        // 每秒钟切换一次图片 
-        setInterval(showNextImage, 1000);
-    </script>
+        </div>
+        
+        <div class="category">
+            <h2 class="category-title">实用工具</h2>
+            <div class="site-grid">
+                <a href="https://www.processon.com" class="site-item" target="_blank">
+                    <div class="site-name">ProcessOn</div>
+                    <div class="site-desc">在线作图工具</div>
+                </a>
+                <a href="https://www.photopea.com" class="site-item" target="_blank">
+                    <div class="site-name">Photopea</div>
+                    <div class="site-desc">在线PS工具</div>
+                </a>
+                <a href="https://www.remove.bg" class="site-item" target="_blank">
+                    <div class="site-name">Remove.bg</div>
+                    <div class="site-desc">在线抠图工具</div>
+                </a>
+                <a href="https://www.ilovepdf.com" class="site-item" target="_blank">
+                    <div class="site-name">iLovePDF</div>
+                    <div class="site-desc">PDF在线工具</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 CANFLY导航. 保留所有权利.</p>
+    </footer>
 </body>
-</html>
+</html> 
