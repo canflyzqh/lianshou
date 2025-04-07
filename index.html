@@ -1,194 +1,107 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANFLY导航</title>
+    <meta name="description" content="Play Monster Survivors - the ultimate survival RPG game online. Battle epic creatures, collect resources, and survive in this thrilling action-packed adventure.">
+    <meta name="keywords" content="Monster Survivors, online survival game, RPG game, action adventure game, browser game">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://2doller.online/"> 
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Monster Survivors - Online Survival RPG Game">
+    <meta property="og:description" content="Play Monster Survivors - Battle epic creatures and survive in this thrilling action-packed adventure.">
+    <meta property="og:image" content="https://2doller.online/og-image.jpg"> 
+    <meta property="og:url" content="https://2doller.online/"> 
+    
+    <title>Monster Survivors - Online Survival RPG Game | 2doller.online</title> 
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    
+    <!-- Custom CSS -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .game-frame {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
         
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            background: #f5f5f5;
-            color: #333;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 30px 0;
-        }
-        
-        .logo {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        
-        .search-box {
-            max-width: 600px;
-            margin: 20px auto;
-            position: relative;
-        }
-        
-        .search-box input {
-            width: 100%;
-            padding: 12px 20px;
-            border: 2px solid #ddd;
-            border-radius: 30px;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.3s;
-        }
-        
-        .search-box input:focus {
-            border-color: #0078ff;
-            box-shadow: 0 0 5px rgba(0,120,255,0.3);
-        }
-        
-        .category {
-            margin: 30px 0;
-        }
-        
-        .category-title {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 4px solid #0078ff;
-        }
-        
-        .site-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .site-item {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            text-decoration: none;
-            color: #333;
-        }
-        
-        .site-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .site-icon {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 10px;
-        }
-        
-        .site-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .site-desc {
-            font-size: 0.9em;
-            color: #666;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            color: #666;
+        @media (max-width: 768px) {
+            .game-frame {
+                aspect-ratio: 9/16;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">CANFLY导航</div>
-            <div class="search-box">
-                <input type="text" placeholder="搜索网站...">
-            </div>
+<body class="bg-slate-50 text-slate-900">
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+                Monster Survivors 
+            </h1>
+            <p class="text-xl text-slate-600 mb-8">
+                Survive. Battle. Conquer. The ultimate creature survival RPG experience 
+            </p>
         </header>
-        
-        <div class="category">
-            <h2 class="category-title">常用网站</h2>
-            <div class="site-grid">
-                <a href="https://www.baidu.com" class="site-item" target="_blank">
-                    <div class="site-name">百度</div>
-                    <div class="site-desc">全球最大的中文搜索引擎</div>
-                </a>
-                <a href="https://www.zhihu.com" class="site-item" target="_blank">
-                    <div class="site-name">知乎</div>
-                    <div class="site-desc">中文互联网高质量的问答社区</div>
-                </a>
-                <a href="https://www.bilibili.com" class="site-item" target="_blank">
-                    <div class="site-name">哔哩哔哩</div>
-                    <div class="site-desc">中国年轻世代高度聚集的文化社区</div>
-                </a>
-                <a href="https://www.weibo.com" class="site-item" target="_blank">
-                    <div class="site-name">微博</div>
-                    <div class="site-desc">随时随地发现新鲜事</div>
-                </a>
-            </div>
+ 
+        <!-- Game Frame Section -->
+        <section class="mb-12 rounded-xl overflow-hidden shadow-2xl">
+            <iframe 
+                src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-0g.html"  
+                class="w-full game-frame"
+                allow="fullscreen"
+                loading="eager"
+                title="Monster Survivors Online Game"
+            ></iframe>
+        </section>
+ 
+        <!-- Game Details -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Game Introduction -->
+            <section class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-semibold text-slate-800 mb-4">
+                    About Monster Survivors 
+                </h2>
+                <p class="text-slate-600 mb-4">
+                    Enter the brutal world of Monster Survivors, where you must:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                    <li>Battle 50+ unique creatures</li>
+                    <li>Collect rare survival resources</li>
+                    <li>Craft powerful weapons and armor</li>
+                    <li>Build secure shelters</li>
+                    <li>Complete challenging quests</li>
+                </ul>
+            </section>
+ 
+            <!-- Features -->
+            <section class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-semibold text-slate-800 mb-4">
+                    Key Features 
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="h-6 w-6 text-blue-500">✔️</div>
+                        </div>
+                        <p class="ml-3 text-slate-600">
+                            Real-time multiplayer survival battles 
+                        </p>
+                    </div>
+                    <!-- Repeat for other features -->
+                </div>
+            </section>
         </div>
-        
-        <div class="category">
-            <h2 class="category-title">学习资源</h2>
-            <div class="site-grid">
-                <a href="https://www.icourse163.org" class="site-item" target="_blank">
-                    <div class="site-name">中国大学MOOC</div>
-                    <div class="site-desc">优质的中文MOOC学习平台</div>
-                </a>
-                <a href="https://www.runoob.com" class="site-item" target="_blank">
-                    <div class="site-name">菜鸟教程</div>
-                    <div class="site-desc">编程技术学习网站</div>
-                </a>
-                <a href="https://www.w3school.com.cn" class="site-item" target="_blank">
-                    <div class="site-name">W3School</div>
-                    <div class="site-desc">Web技术教程</div>
-                </a>
-                <a href="https://www.csdn.net" class="site-item" target="_blank">
-                    <div class="site-name">CSDN</div>
-                    <div class="site-desc">专业开发者社区</div>
-                </a>
-            </div>
-        </div>
-        
-        <div class="category">
-            <h2 class="category-title">实用工具</h2>
-            <div class="site-grid">
-                <a href="https://www.processon.com" class="site-item" target="_blank">
-                    <div class="site-name">ProcessOn</div>
-                    <div class="site-desc">在线作图工具</div>
-                </a>
-                <a href="https://www.photopea.com" class="site-item" target="_blank">
-                    <div class="site-name">Photopea</div>
-                    <div class="site-desc">在线PS工具</div>
-                </a>
-                <a href="https://www.remove.bg" class="site-item" target="_blank">
-                    <div class="site-name">Remove.bg</div>
-                    <div class="site-desc">在线抠图工具</div>
-                </a>
-                <a href="https://www.ilovepdf.com" class="site-item" target="_blank">
-                    <div class="site-name">iLovePDF</div>
-                    <div class="site-desc">PDF在线工具</div>
-                </a>
-            </div>
-        </div>
+ 
+        <!-- Footer -->
+        <footer class="mt-12 border-t border-slate-200 pt-8 text-center">
+            <p class="text-slate-500">
+                © 2024 2doller.online  - All rights reserved 
+            </p>
+        </footer>
     </div>
-    
-    <footer>
-        <p>&copy; 2024 CANFLY导航. 保留所有权利.</p>
-    </footer>
 </body>
-</html> 
+</html>
